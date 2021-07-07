@@ -57,7 +57,7 @@ body {
   font-size: 32px;
   outline: none;
   border: none;
-  color: rgb(49, 12, 12);
+  color: rgb(122, 88, 88);
 }
 .title > input::placeholder {
   color: #929292;
@@ -232,4 +232,126 @@ select > option {
 .buttons > div:hover {
   background-color: #210505;
   color: #e3e3e3;
+}
+
+@media (max-width: 650px) {
+  /* navigation bar------------------------------------------------------- */
+
+  .nav {
+    padding: 20px 15px;
+  }
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  /* todo main area------------------------------------------------------- */
+
+  .todo {
+    padding: 15px;
+    display: flex;
+    overflow: hidden;
+  }
+
+  /* cockpit------------------------------------------------------- */
+
+  .cockpit {
+    width: 100%;
+    padding: 10px 0px;
+  }
+
+  /* title------------------------------------------------------- */
+
+  .title > input {
+    font-size: 28px;
+  }
+
+  /* task input fields------------------------------------------------------- */
+
+  .task-input {
+    border-radius: 0px;
+    background-color: transparent;
+    margin-top: 10px;
+    display: block;
+    padding: 0px;
+  }
+  .list-input > input {
+    width: 100%;
+    border-radius: 20px;
+    background-color: #f2eee2;
+    font-weight: 500;
+    font-size: 13px;
+  }
+
+  /* select priority input------------------------------------------------------- */
+
+  select {
+    float: right;
+    margin: 5px 0px;
+    width: 90px;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+  select > option {
+    background-color: #786868;
+    color: white;
+  }
+
+  /* todo list------------------------------------------------------- */
+
+  .list {
+    width: 100%;
+  }
+
+  /* list item------------------------------------------------------- */
+  .list-item {
+    width: 97%;
+    height: 45px;
+  }
+
+  /* checkbox------------------------------------------------------- */
+  .checkbox {
+    border-radius: 5px 0px 0px 5px;
+    width: 15%;
+    height: 100%;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .checkbox input {
+    width: 14px;
+    height: 14px;
+  }
+  .checkbox input:checked::after {
+    left: 3px;
+    top: 6px;
+    box-shadow: 0.5px 0 0 white, 2.5px 0 0 white, 2.5px -0.5px 0 white,
+      2.5px -2.5px 0 white, 2.5px -4.5px 0 white, 2.5px -6.5px 0 white;
+  }
+
+  /* item name------------------------------------------------------- */
+  .item-name {
+    font-size: 13px;
+  }
+
+  /* delete icon------------------------------------------------------- */
+  .item-delete {
+    width: 15%;
+  }
+
+  /* buttons------------------------------------------------------- */
+
+  .buttons {
+    width: 100%;
+  }
+
+  .buttons > div {
+    border-radius: 0px;
+    color: #858585;
+    height: 40px;
+    width: 25%;
+    font-weight: 600;
+    font-size: 14px;
+  }
 }
