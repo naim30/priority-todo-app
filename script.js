@@ -90,8 +90,10 @@ function onCheckHandler(id, isChecked) {
 function onDeleteHandler(id) {
   let target = document.querySelector(`[listId="${id}"]`);
   target.remove();
+  if (state.itemList[id].checked === false) {
+    state.todoNum -= 1;
+  }
   state.itemList.splice(id, 1);
-  state.todoNum -= 1;
   loadItemHandler(state.itemList);
   loadTodoNumHandler(state.todoNum);
 }
