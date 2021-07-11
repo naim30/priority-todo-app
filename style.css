@@ -49,9 +49,10 @@ body {
 
 .title {
   width: 100%;
+  display: flex;
 }
 .title > input {
-  width: 100%;
+  width: 90%;
   font-family: "Poppins";
   font-weight: bold;
   font-size: 32px;
@@ -61,6 +62,16 @@ body {
 }
 .title > input::placeholder {
   color: #929292;
+}
+.title > span {
+  width: 10%;
+  font-family: "Poppins";
+  font-size: 25px;
+  font-weight: 600;
+  color: #786868;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* task input fields------------------------------------------------------- */
@@ -72,13 +83,15 @@ body {
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   padding: 5px;
+}
+.list-input {
+  width: 75%;
 }
 .list-input > input {
   outline: none;
-  height: 100%;
-  width: 200%;
+  width: 100%;
   border: none;
   background-color: transparent;
   padding: 8px 15px;
@@ -91,11 +104,23 @@ body {
   color: #a7a7a7;
 }
 
+/* container------------------------------------------------------- */
+
+.container {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
 /* select priority input------------------------------------------------------- */
 
+.priority-input {
+  width: 70%;
+}
 select {
   background-color: #786868;
-  width: 120px;
+  width: 100%;
   color: white;
   border-radius: 10px;
   padding: 8px;
@@ -106,6 +131,31 @@ select {
 }
 select > option {
   background-color: #786868;
+  color: white;
+}
+
+/* add button------------------------------------------------------- */
+
+.add-button {
+  background-color: green;
+  margin: 0px 0px 0px 5px;
+  border-radius: 10px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-button:hover {
+  background-color: rgb(0, 58, 0);
+  cursor: pointer;
+}
+.add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add > .material-icons {
+  font-size: 25px;
   color: white;
 }
 
@@ -152,6 +202,7 @@ select > option {
   appearance: none;
   background-color: white;
   border-radius: 4px;
+  cursor: pointer;
 }
 .checkbox input:checked {
   background-color: rgb(36, 36, 36);
@@ -189,6 +240,10 @@ select > option {
   font-weight: 500;
   width: 75%;
 }
+.item-done {
+  text-decoration: line-through;
+  color: #555555;
+}
 
 /* delete icon------------------------------------------------------- */
 .item-delete {
@@ -198,13 +253,15 @@ select > option {
   align-items: center;
   height: 100%;
   border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
 }
 .item-delete:hover {
   background-color: #d8d8d8;
 }
-.material-icons {
+.delete {
   color: red;
   font-size: 20px;
+  cursor: pointer;
 }
 
 /* buttons------------------------------------------------------- */
@@ -215,10 +272,9 @@ select > option {
   width: 580px;
   justify-content: space-between;
 }
-
-.buttons > div {
+.buttons > .button {
   border-radius: 10px;
-  background-color: #e3e3e3;
+  cursor: pointer;
   width: 90px;
   height: 45px;
   display: flex;
@@ -228,10 +284,13 @@ select > option {
   font-weight: 600;
   font-size: 15px;
 }
-
-.buttons > div:hover {
+.selected {
   background-color: #210505;
   color: #e3e3e3;
+}
+.unselected {
+  background-color: #e3e3e3;
+  color: #210505;
 }
 
 @media (max-width: 650px) {
@@ -262,39 +321,64 @@ select > option {
   /* title------------------------------------------------------- */
 
   .title > input {
+    width: 85%;
     font-size: 28px;
+  }
+  .title > span {
+    width: 15%;
+    font-size: 20px;
   }
 
   /* task input fields------------------------------------------------------- */
 
   .task-input {
+    width: 100%;
     border-radius: 0px;
     background-color: transparent;
     margin-top: 10px;
     display: block;
     padding: 0px;
   }
-  .list-input > input {
+  .list-input {
     width: 100%;
-    border-radius: 20px;
+  }
+  .list-input > input {
     background-color: #f2eee2;
+    padding: 10px 15px;
+    border-radius: 40px;
     font-weight: 500;
     font-size: 13px;
+  }
+  /* container------------------------------------------------------- */
+
+  .container {
+    margin: 5px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
   }
 
   /* select priority input------------------------------------------------------- */
 
+  .priority-input {
+    width: 30%;
+  }
   select {
-    float: right;
-    margin: 5px 0px;
-    width: 90px;
-    border-radius: 20px;
-    padding: 5px 10px;
+    border-radius: 40px;
+    padding: 6px 10px;
     font-size: 13px;
   }
-  select > option {
-    background-color: #786868;
-    color: white;
+
+  /* add button------------------------------------------------------- */
+
+  .add-button {
+    margin: 0px;
+    border-radius: 40px;
+    width: 15%;
+  }
+  .add > .material-icons {
+    font-size: 22px;
   }
 
   /* todo list------------------------------------------------------- */
@@ -345,13 +429,14 @@ select > option {
   .buttons {
     width: 100%;
   }
-
-  .buttons > div {
+  .buttons > .button {
     border-radius: 0px;
-    color: #858585;
     height: 40px;
     width: 25%;
     font-weight: 600;
     font-size: 14px;
+  }
+  .unselected {
+    color: #858585;
   }
 }

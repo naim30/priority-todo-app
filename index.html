@@ -32,6 +32,7 @@
       <div class="cockpit">
         <div class="title">
           <input id="title" type="text" name="title" placeholder="Untitled" />
+          <span>0</span>
         </div>
         <div class="task-input">
           <div class="list-input">
@@ -42,74 +43,34 @@
               placeholder="Add a Task..."
             />
           </div>
-          <div class="priority-input">
-            <select name="priority" id="priority">
-              <option value="high">
-                <div class="high-name">High</div>
-              </option>
-              <option value="high">
-                <div class="mwdium-name">Medium</div>
-              </option>
-              <option value="high">
-                <div class="low-name">Low</div>
-              </option>
-            </select>
+          <div class="container">
+            <div class="priority-input">
+              <select name="priority" id="priority">
+                <option value="high">
+                  <div class="high-name">High</div>
+                </option>
+                <option value="medium">
+                  <div class="mwdium-name">Medium</div>
+                </option>
+                <option value="low">
+                  <div class="low-name">Low</div>
+                </option>
+              </select>
+            </div>
+            <div class="add-button">
+              <div class="add"><span class="material-icons">add</span></div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="list">
-        <div class="list-item medium">
-          <div class="checkbox">
-            <input type="checkbox" name="1" id="1" />
-          </div>
-          <div class="item-name">Hit the gym</div>
-          <div class="item-delete">
-            <span class="material-icons">delete</span>
-          </div>
-        </div>
-        <div class="list-item high">
-          <div class="checkbox">
-            <input type="checkbox" name="1" id="1" />
-          </div>
-          <div class="item-name">Pay bills</div>
-          <div class="item-delete">
-            <span class="material-icons">delete</span>
-          </div>
-        </div>
-        <div class="list-item medium">
-          <div class="checkbox">
-            <input type="checkbox" name="1" id="1" />
-          </div>
-          <div class="item-name">Meet George</div>
-          <div class="item-delete">
-            <span class="material-icons">delete</span>
-          </div>
-        </div>
-        <div class="list-item low">
-          <div class="checkbox">
-            <input type="checkbox" name="1" id="1" />
-          </div>
-          <div class="item-name">Read a book</div>
-          <div class="item-delete">
-            <span class="material-icons">delete</span>
-          </div>
-        </div>
-        <div class="list-item low">
-          <div class="checkbox">
-            <input type="checkbox" name="1" id="1" />
-          </div>
-          <div class="item-name">Organize office</div>
-          <div class="item-delete">
-            <span class="material-icons">delete</span>
-          </div>
-        </div>
-      </div>
+      <div class="list"></div>
       <div class="buttons">
-        <div class="all-button">All</div>
-        <div class="high-button">High</div>
-        <div class="mwdium-button">Medium</div>
-        <div class="low-button">Low</div>
+        <div class="all button selected">All</div>
+        <div class="high button unselected">High</div>
+        <div class="medium button unselected">Medium</div>
+        <div class="low button unselected">Low</div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
