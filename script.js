@@ -19,6 +19,7 @@ function addItemHandler(event) {
       checked: false,
     });
     state.todoNum += 1;
+    itemInput.value = "";
     loadItemHandler(state.itemList);
     loadTodoNumHandler(state.todoNum);
   }
