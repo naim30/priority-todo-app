@@ -16,7 +16,7 @@
 I made a to-do list with task priorities and assigned different colours to them based on their importance.
 You can also sort your tasks by prioritise.
 
-<div style="display: flex;">
+<div style="display: flex; justify-content: center;">
     <img width="200px" height="200px" alt="high prirority todo list" src="public/high.jpg" style="padding: 10px">
     <img width="200px" height="200px"  alt="medium prirority todo list" src="public/medium.jpg"  style="padding: 10px">
     <img width="200px" height="200px"  alt="low prirority todo list" src="public/low.jpg"  style="padding: 10px">
